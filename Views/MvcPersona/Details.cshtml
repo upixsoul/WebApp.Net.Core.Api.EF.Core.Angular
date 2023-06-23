@@ -1,0 +1,37 @@
+﻿@using WebApp.Net.Core.Api.EF.Core.Angular.Models.ViewModels
+@model PersonaDetailsViewModel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Persona</h4>
+<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PersonId) @Html.DisplayFor(model => model.PersonId)
+        </dt>
+        <dt>
+            @Html.DisplayNameFor(model => model.Name) @Html.DisplayFor(model => model.Name)
+        </dt>
+        <dt>
+            @Html.DisplayNameFor(model => model.Age) @Html.DisplayFor(model => model.Age)
+        </dt>
+        <dt>
+            @Html.DisplayNameFor(model => model.Number) @Html.DisplayFor(model => model.Number)
+        </dt>
+        <dt>
+            @Html.DisplayNameFor(model => model.DateOfBirth) @Html.DisplayFor(model => model.DateOfBirth)
+        </dt>
+        <dt>
+            @Html.DisplayNameFor(model => model.IdentificationNumber) @Html.DisplayFor(model => model.IdentificationNumber)
+        </dt>
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.PersonId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
